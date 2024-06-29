@@ -150,7 +150,7 @@ pre {
 /* Layout */
 body {
     display: grid;
-    grid-template-rows: 1fr 4fr .5fr;
+    grid-template-rows: 1fr 4fr fr;
     min-height: 100vh;
 }
 
@@ -162,6 +162,7 @@ header {
 }
 
 main {
+    display: grid;
     padding: 1rem;
 }
 
@@ -170,6 +171,48 @@ footer {
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+#library {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.book-card {
+    display: grid;
+    grid-template-rows: 1fr;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+dialog {
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
 }
 
 /* Responsive */
